@@ -44,9 +44,7 @@ echo($name);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>
-    img{width:30%; height:30%}
-</style>
+
 <body>
     <img src=<?echo($image);?> alt="ポケモンの画像" >
 </body>
