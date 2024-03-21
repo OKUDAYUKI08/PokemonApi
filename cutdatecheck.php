@@ -140,24 +140,35 @@
                         width: 50%;
                     }
                 </style>
+                <?
+                $today=new DateTime();
+                $strtoday=$today->format("Y-m-d");
+
+                ?>
                 <div class="box">
                     <div class="box">
                        <p class="title">現在の経過日数</p>
-                       <p class="is-size-3"><?echo($number);?>日</p>
+                       <p class="is-size-3">
+                        <?
+                        if(isset($_GET["cutdate"])){
+                            $cutdate=$_GET["cutdate"];
+                            $cutdate=new DateTime($cutdate);
+                            $diff=$cutdate->diff($today);
+                            echo($diff->days);
+                        };?>
+                        日</p>
                     </div>
                     <div class="box">
-                        <form class="form" action="date.php">
+                        <form class="form" action="index.php">
                             <p class="title">散髪日更新フォーム</p>
                             <div class="field mr-6">
                                 <label class="label">日付</label>
                                 <p class="control">
-                                    <input class="input is-info" type="date">
+                                    <input class="input is-info" type="date" name="cutdate" value="<?echo($strtoday);?>"/>
                                 </p>
                             </div>
-                            <button class="button is-primary ">更新</button>
+                            <input type="submit" class="button is-primary" value="更新"/>
                         </form>
-
-
                     </div>
                     <div class="box">
                         <p class="title">あなたの経過日数に応じたポケモンは…</p>
