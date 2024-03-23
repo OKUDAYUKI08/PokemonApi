@@ -77,7 +77,7 @@
                 <p class="is-size-3"><?if(isset($diff)){echo($diff)."日";}else{echo("");}?></p>
             </div>
             <div class="box">
-                <form class="form" action="index.php">
+                <form class="form" action="pokemon" method="post">
                     <p class="title">散髪日更新フォーム</p>
                     <div class="field mr-6">
                         <label class="label">日付</label>

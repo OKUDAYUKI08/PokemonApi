@@ -41,7 +41,7 @@
         <header>
             <nav class=" navbar is-light is-fixed-top " role="navigation" aria-label="main navigation">
                 <div class="navbar-brand">
-                    <a class="navbar-item " href="#">
+                    <a class="navbar-item " href="">
                         <img src="cutdate-min.svg">
                     </a>
                     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="targetMenu">
@@ -60,7 +60,7 @@
                                 <span>ホーム</span>
                             </span>
                         </a>
-                        <a class=" navbar-item">
+                        <a class=" navbar-item" >
                             <span class="icon-text has-text-success">
                                 <span class="icon">
                                     <i class="fas fa-home"></i>
@@ -80,12 +80,14 @@
                             </a>
                         </div>
                         <div class="navbar-item">
-                            <a class="button is-danger is-outlined">
-                                <span class="icon">
-                                    <i class="fas fa-sign-out-alt"></i>
-                                </span>
-                                <span>ログアウト</span>
-                            </a>
+                            <form action="">
+                                <button class="button is-danger is-outlined">
+                                    <span class="icon">
+                                        <i class="fas fa-sign-out-alt"></i>
+                                    </span>
+                                    <span>ログアウト</span>
+                                </button>
+                            </form>
                         </div>    
                     </div>
                 </div>
