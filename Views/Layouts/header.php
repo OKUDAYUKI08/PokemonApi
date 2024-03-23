@@ -41,7 +41,7 @@
         <header>
             <nav class=" navbar is-light is-fixed-top " role="navigation" aria-label="main navigation">
                 <div class="navbar-brand">
-                    <a class="navbar-item " href="">
+                    <a class="navbar-item " href="pokemon">
                         <img src="cutdate-min.svg">
                     </a>
                     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="targetMenu">
@@ -52,7 +52,7 @@
                 </div>
                 <div id="targetMenu" class="navbar-menu">
                     <div class="navbar-start">
-                        <a class=" navbar-item">
+                        <a class=" navbar-item" href="pokemon">
                             <span class="icon-text has-text-link">
                                 <span class="icon">
                                     <i class="fas fa-home"></i>
@@ -60,7 +60,7 @@
                                 <span>ホーム</span>
                             </span>
                         </a>
-                        <a class=" navbar-item" >
+                        <a class=" navbar-item" href="sigh_up">
                             <span class="icon-text has-text-success">
                                 <span class="icon">
                                     <i class="fas fa-home"></i>
@@ -72,7 +72,7 @@
 
                     <div class="navbar-end">
                         <div class="navbar-item">
-                            <a class="button is-primary is-outlined">
+                            <a class="button is-primary is-outlined" href="sigh_in">
                                 <span class="icon">
                                     <i class="fas fa-sign-in-alt"></i>
                                 </span>
@@ -80,7 +80,7 @@
                             </a>
                         </div>
                         <div class="navbar-item">
-                            <form action="">
+                            <form action="sigh_out">
                                 <button class="button is-danger is-outlined">
                                     <span class="icon">
                                         <i class="fas fa-sign-out-alt"></i>

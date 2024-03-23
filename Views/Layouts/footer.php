@@ -1,16 +1,9 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">          
         <footer class="footer">
-            <div class="content has-text-centered">
-                <nav class="level">
-                    <div class="level-item has-text-centered">
-                        <a href="#">
-                        プライバシー
-                        </a>
-                    </div>
-                </nav>
+            <div class="content has-text-centered is-light">
                 <div>
-                © 岡崎奥田
+                ポケモンカットだぜ！！© 岡崎奥田
                 </div>
             </div>
         </footer>

@@ -20,7 +20,7 @@
                 $key=array_rand($randpokenumber,1);
                 $pokenumber=$randpokenumber[$key];
             }
-            elseif($diff>21){
+            elseif($diff>14){
                 $randpokenumber=array(88,110,109);
                 $key=array_rand($randpokenumber,1);
                 $pokenumber=$randpokenumber[$key];
@@ -67,17 +67,16 @@
                 width: 50%;
             }
         </style>
-        <?
 
-
-        ?>
         <div class="box">
+
             <div class="box">
                 <p class="title">現在の経過日数</p>
                 <p class="is-size-3"><?if(isset($diff)){echo($diff)."日";}else{echo("");}?></p>
             </div>
+
             <div class="box">
-                <form class="form" action="pokemon" method="post">
+                <form class="form" action="index.php">
                     <p class="title">散髪日更新フォーム</p>
                     <div class="field mr-6">
                         <label class="label">日付</label>
@@ -88,6 +87,7 @@
                     <input type="submit" class="button is-primary" value="更新"/>
                 </form>
             </div>
+            
             <div class="box">
                 <?if(isset($diff)){?>
                     <p class="title">あなたの経過日数に応じたポケモンは…</p>
@@ -101,6 +101,5 @@
                 <?}?>
             </div>
         </div>
-
     </div>
 </main>
