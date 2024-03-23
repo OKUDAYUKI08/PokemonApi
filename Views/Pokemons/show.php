@@ -1,5 +1,5 @@
 <main class="my-6 py-6 mx-3" >
-    <div >
+    <div>
         <?php
         $today=new DateTime();
         $strtoday=$today->format("Y-m-d");
@@ -10,14 +10,20 @@
             $diff=$diff->days;
         }
         if(isset($diff)){
-            if($diff<1){
-                $pokenumber=1;
+            if($diff<7){
+                $randpokenumber=array(350,700,730,282);
+                $key=array_rand($randpokenumber,1);
+                $pokenumber=$randpokenumber[$key];
             }
-            elseif($diff<3){
-                $pokenumber=2;
+            elseif($diff<14){
+                $randpokenumber=array(350,700);
+                $key=array_rand($randpokenumber,1);
+                $pokenumber=$randpokenumber[$key];
             }
-            elseif($diff<4){
-                $pokenumber=3;
+            elseif($diff>21){
+                $randpokenumber=array(88,110,109);
+                $key=array_rand($randpokenumber,1);
+                $pokenumber=$randpokenumber[$key];
             }
             $pokenumber=strval($pokenumber);
             $urlname = "https://pokeapi.co/api/v2/pokemon-species/".$pokenumber;
@@ -61,6 +67,10 @@
                 width: 50%;
             }
         </style>
+        <?
+
+
+        ?>
         <div class="box">
             <div class="box">
                 <p class="title">現在の経過日数</p>
@@ -72,7 +82,7 @@
                     <div class="field mr-6">
                         <label class="label">日付</label>
                         <p class="control">
-                            <input class="input is-info" type="date" name="cutdate" value="<?echo($strtoday);?>"/>
+                            <input class="input is-info" type="date" name="cutdate" value="<?echo($strtoday);?>" max="<?echo($strtoday);?>"/>
                         </p>
                     </div>
                     <input type="submit" class="button is-primary" value="更新"/>
