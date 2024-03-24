@@ -10,18 +10,38 @@
             $diff=$diff->days;
         }
         if(isset($diff)){
-            if($diff<7){
-                $randpokenumber=array(350,700,730,282);
+            if($diff<2){
+                $randpokenumber=array(700,350,282,475,);
                 $key=array_rand($randpokenumber,1);
                 $pokenumber=$randpokenumber[$key];
             }
-            elseif($diff<14){
-                $randpokenumber=array(350,700);
+            elseif($diff<10){
+                $randpokenumber=array(133,136,38);
                 $key=array_rand($randpokenumber,1);
                 $pokenumber=$randpokenumber[$key];
             }
-            elseif($diff>14){
-                $randpokenumber=array(88,110,109);
+            elseif($diff<20){
+                $randpokenumber=array(16,21,58,519,677);
+                $key=array_rand($randpokenumber,1);
+                $pokenumber=$randpokenumber[$key];
+            }
+            elseif($diff<30){
+                $randpokenumber=array(571,17,59,520,200);
+                $key=array_rand($randpokenumber,1);
+                $pokenumber=$randpokenumber[$key];
+            }
+            elseif($diff<40){
+                $randpokenumber=array(51,180,18,398,405);
+                $key=array_rand($randpokenumber,1);
+                $pokenumber=$randpokenumber[$key];
+            }
+            elseif($diff<50){
+                $randpokenumber=array(435,465,607,817,421,676);
+                $key=array_rand($randpokenumber,1);
+                $pokenumber=$randpokenumber[$key];
+            }
+            elseif($diff>=50){
+                $randpokenumber=array(971,972,633,634,860,861,221,711);
                 $key=array_rand($randpokenumber,1);
                 $pokenumber=$randpokenumber[$key];
             }
@@ -67,14 +87,15 @@
                 width: 50%;
             }
         </style>
+        <?
 
+
+        ?>
         <div class="box">
-
             <div class="box">
                 <p class="title">現在の経過日数</p>
                 <p class="is-size-3"><?if(isset($diff)){echo($diff)."日";}else{echo("");}?></p>
             </div>
-
             <div class="box">
                 <form class="form" action="index.php">
                     <p class="title">散髪日更新フォーム</p>
@@ -87,7 +108,6 @@
                     <input type="submit" class="button is-primary" value="更新"/>
                 </form>
             </div>
-            
             <div class="box">
                 <?if(isset($diff)){?>
                     <p class="title">あなたの経過日数に応じたポケモンは…</p>
@@ -101,5 +121,6 @@
                 <?}?>
             </div>
         </div>
+
     </div>
 </main>
